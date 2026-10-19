@@ -1,0 +1,5 @@
+==========================================
+
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\sec\WinSec-PC-Check.ps1" -Demo -OutputRoot "C:\sec\WinSec-Reports"
+
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\sec\WinSec-PC-Check.ps1" -LookbackMinutes 60 -OutputRoot "C:\sec\WinSec-Reports"
