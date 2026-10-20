@@ -25,8 +25,11 @@ Microsoft Defender 이벤트와 보안 상태를 보고서로 저장하는 Power
 실제 로그인 시도나 악성코드 실행 없이 탐지 로직을 확인합니다.
 
 ```PowerShell
-PowerShell.exe -NoProfile -ExecutionPolicy Bypass -File ".\WinSec-PC-Check.ps1" -Demo -OutputRoot "C:\sec\WinSec-Reports"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\sec\WinSec-PC-Check.ps1" -LookbackMinutes 60 -OutputRoot "C:\sec\WinSec-Reports"
 ```
+
+<img width="979" height="512" alt="image" src="https://github.com/user-attachments/assets/0b6163e0-a768-402b-bb95-c152dec87c45" />
+
 
 ## 기본 탐지 기준
 
@@ -46,6 +49,9 @@ PowerShell.exe -NoProfile -ExecutionPolicy Bypass -File ".\WinSec-PC-Check.ps1" 
 - audit-policy.txt: 감사 정책 조회 결과 - 실제 조회 성공 시 생성
 - sha256.csv: 결과 파일 해시 목록 - 해시 목록 자체는 계산 대상에서 제외
 
+<img width="782" height="412" alt="image" src="https://github.com/user-attachments/assets/ac5214d4-ef93-4f3f-9ffc-82154ce7ec75" />
+
+
 ## 범위 및 제약사항
 
 수동 실행 시점의 로그를 분석하는 도구이며 상시 감시 서비스가 아닙니다.
@@ -61,4 +67,5 @@ PowerShell.exe -NoProfile -ExecutionPolicy Bypass -File ".\WinSec-PC-Check.ps1" 
 개인 PC 실행 과정에서 발견된 기본 출력 경로 처리 오류와 해시 목록 파일 접근 충돌을 수정한 뒤 정상 실행을 확인했습니다.
 해시 목록 파일 접근 충돌을 수정한 뒤 정상 실행을 확인 했습니다.
 Windows Server에서의 탐지 정확도와 운영 적합성은 추가 검증 대상입니다.
+
 
